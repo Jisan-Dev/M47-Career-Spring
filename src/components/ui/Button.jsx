@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 const Button = ({ text }) => {
   return (
     <div>
@@ -13,3 +14,7 @@ const Button = ({ text }) => {
 };
 
 export default Button;
+
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+};
