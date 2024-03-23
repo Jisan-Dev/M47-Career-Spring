@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <h1>Hail Satan</h1>,
+    element: <h1 className="bg-[#09090B] text-white text-8xl p-80">Hail Satan</h1>,
   },
 ]);
 
