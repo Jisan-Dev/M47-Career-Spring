@@ -11,7 +11,7 @@ const CategoryList = () => {
   }, []);
 
   return (
-    <div className="flex gap-6 container mx-auto justify-center">
+    <div className="flex gap-6 ">
       {categories.map((category) => (
         <div key={category.id} className="p-10 grow rounded-lg bg-gradient-to-b from-bannerGradientFrom to to-bannerGradientTo">
           <div className="bg-gradient-to-b from-[#7E90FE1A] to-[#9873FF1A] w-[70px] h-[70px] p-4 rounded-lg mb-8">
