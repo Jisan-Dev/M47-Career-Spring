@@ -26,7 +26,7 @@ const Homepage = () => {
       </section>
 
       {/*category-list section */}
-      <section className="mt-24 font-gsans container mx-auto justify-center">
+      <section className="mt-28 font-gsans container mx-auto justify-center">
         <SectionHeader heading="Job Category List" subheading="Explore thousands of job opportunities with all the information you need. Its your future" />
         <main>
           <CategoryList />
@@ -34,7 +34,7 @@ const Homepage = () => {
       </section>
 
       {/* featured-jobs section */}
-      <section className="mt-24 font-gsans container mx-auto justify-center">
+      <section className="mt-28 font-gsans container mx-auto justify-center">
         <SectionHeader heading="Featured Jobs" subheading="Explore thousands of job opportunities with all the information you need. Its your future" />
         <main>
           <FeaturedJobsContainer />
