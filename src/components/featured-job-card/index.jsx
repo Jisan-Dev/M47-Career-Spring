@@ -5,7 +5,7 @@ import Button from '../ui/Button';
 
 const FeaturedJobCard = ({ job }) => {
   return (
-    <div className="p-10 rounded-lg border border-gray-200 flex flex-col">
+    <div className="p-10 rounded-lg border border-indigo-100  flex flex-col">
       <div>
         <img src={job.logo} alt="" />
       </div>
@@ -27,7 +27,7 @@ const FeaturedJobCard = ({ job }) => {
           <BiDollarCircle /> {job.salary}
         </p>
       </div>
-      <Button text="View Details" />
+      <Button text="View Details" px="px-3" py="py-3" />
     </div>
   );
 };
