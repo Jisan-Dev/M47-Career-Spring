@@ -4,21 +4,24 @@ import Button from '../ui/Button';
 
 const FeaturedJobsContainer = () => {
   const [jobs, setJobs] = useState([]);
+  const [dataLength, setDataLength] = useState(4);
 
   fetch('jobs.json')
     .then((res) => res.json())
     .then((data) => setJobs(data));
 
+  const clickHandler = () => {
+    setDataLength(jobs.length);
+  };
+
   return (
     <>
       <div className="grid grid-cols-2 gap-6 ">
-        {jobs.map((job) => (
+        {jobs.slice(0, dataLength).map((job) => (
           <FeaturedJobCard key={job.id} job={job} />
         ))}
       </div>
-      <div className="flex justify-center mt-6">
-        <Button text="See All Jobs" />
-      </div>
+      <div className="flex justify-center mt-6">{dataLength !== jobs.length && <Button clickHandler={clickHandler} text="See All Jobs" />}</div>
     </>
   );
 };
