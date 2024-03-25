@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { GrLocation } from 'react-icons/gr';
 import { BiDollarCircle } from 'react-icons/bi';
 import Button from '../ui/Button';
+import { Link } from 'react-router-dom';
 
 const FeaturedJobCard = ({ job }) => {
   return (
@@ -27,7 +28,9 @@ const FeaturedJobCard = ({ job }) => {
           <BiDollarCircle /> {job.salary}
         </p>
       </div>
-      <Button text="View Details" px="px-3" py="py-3" />
+      <Link to={`jobs/${job.id}`}>
+        <Button text="View Details" px="px-3" py="py-[10px]" />
+      </Link>
     </div>
   );
 };

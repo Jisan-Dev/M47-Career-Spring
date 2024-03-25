@@ -15,6 +15,9 @@ const Header = () => {
                 </svg>
               </div>
               <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <NavLink to={'/'} className="mr-10">
+                  Home
+                </NavLink>
                 <NavLink className="mr-10">Statistics</NavLink>
                 <NavLink className="mr-10">Applied Jobs</NavLink>
                 <NavLink className="mr-10">Blog</NavLink>
@@ -26,6 +29,7 @@ const Header = () => {
           </div>
           <div className="navbar-center hidden lg:flex ">
             <ul className="font-gsans text-base font-medium flex text-neutral-500">
+              <NavLink className="mr-10 pt-1">Home</NavLink>
               <NavLink className="mr-10 pt-1">Statistics</NavLink>
               <NavLink className="mr-10 pt-1">Applied Jobs</NavLink>
               <NavLink className="mr-10 pt-1">Blog</NavLink>

@@ -9,9 +9,9 @@ const Homepage = () => {
     <>
       {/*hero section */}
       <section className="font-gsans relative overflow-x-hidden bg-gradient-to-b from-bannerGradientFrom to to-bannerGradientTo">
-        <div className="hero container mx-auto">
-          <div className="hero-content flex-col lg:flex-row-reverse justify-between ">
-            <div className="relative ml-20 -mb-4 -mr-10">
+        <div className="container mx-auto">
+          <div className="p-4 flex items-center flex-col lg:flex-row-reverse justify-between ">
+            <div className="ml-20 -mb-4 -mr-10">
               <img src={user} className="w-full z-50" />
             </div>
             <div className="max-w-[570px]">
