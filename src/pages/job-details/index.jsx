@@ -9,14 +9,22 @@ import location from '../../assets/icons/location2.png';
 import Button from '../../components/ui/Button';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { getStoredJobApplications, setStoredJobApplications } from '../../utils/localstorage';
 
 const JobDetails = () => {
   const { id } = useParams();
   const jobs = useLoaderData();
   const job = jobs.find((job) => job.id === Number(id));
 
-  const handleApply = () => {
-    toast.success('Application sent!');
+  const handleApply = async () => {
+    const storedIds = getStoredJobApplications();
+    const storedId = storedIds.some((storedId) => storedId === id);
+    if (!storedId) {
+      setStoredJobApplications(id);
+      toast.success('Application sent!');
+    } else {
+      toast.error('Application already sent!');
+    }
   };
   return (
     <>
@@ -44,7 +52,7 @@ const JobDetails = () => {
             </p>
           </div>
           <div className="border-2 bg-gradient-to-r from-indigo-100 to-violet-100 col-span-2 p-8 rounded-lg">
-            <h3 className="text-zinc-900 text-xl font-semibold mb-12">Job Details</h3>
+            <h3 className="text-zinc-900 text-xl font-semibold mb-10">Job Details</h3>
             <div className="flex items-center gap-2 mb-4">
               <img src={money} />
               <p className="text-neutral-500 font-semibold">
@@ -57,7 +65,7 @@ const JobDetails = () => {
                 <strong className="text-zinc-700 font-semibold">Job Title :</strong> {job.salary}
               </p>
             </div>
-            <h3 className="text-zinc-900 text-xl font-semibold mb-12">Contact Information</h3>
+            <h3 className="text-zinc-900 text-xl font-semibold mb-10">Contact Information</h3>
             <div className="flex items-center gap-2 mb-4">
               <img src={phone} />
               <p className="text-neutral-500 font-semibold">
