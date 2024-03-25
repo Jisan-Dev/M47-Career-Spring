@@ -42,7 +42,9 @@ const Header = () => {
             </ul>
           </div>
           <div className="navbar-end">
-            <Button text="Start Applying" />
+            <a href="/#jobs">
+              <Button text="Start Applying" />
+            </a>
           </div>
         </div>
       </div>

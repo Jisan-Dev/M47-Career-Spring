@@ -30,7 +30,7 @@ const Applied = () => {
   };
   return (
     <div>
-      <h2>applied jobs: {displayJobs.length} </h2>
+      <h2>applied jobs: {appliedJobs.length} </h2>
       <details className="dropdown">
         <summary className="m-1 btn">open or close</summary>
         <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
