@@ -18,9 +18,9 @@ const JobDetails = () => {
 
   const handleApply = async () => {
     const storedIds = getStoredJobApplications();
-    const storedId = storedIds.some((storedId) => storedId === id);
+    const storedId = storedIds.some((storedId) => storedId === Number(id));
     if (!storedId) {
-      setStoredJobApplications(id);
+      setStoredJobApplications(Number(id));
       toast.success('Application sent!');
     } else {
       toast.error('Application already sent!');
@@ -62,7 +62,7 @@ const JobDetails = () => {
             <div className="flex items-center gap-2 mb-8">
               <img src={calender} />
               <p className="text-neutral-500 font-semibold">
-                <strong className="text-zinc-700 font-semibold">Job Title :</strong> {job.salary}
+                <strong className="text-zinc-700 font-semibold">Job Title :</strong> {job.job_title}
               </p>
             </div>
             <h3 className="text-zinc-900 text-xl font-semibold mb-10">Contact Information</h3>

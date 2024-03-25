@@ -19,7 +19,9 @@ const Header = () => {
                   Home
                 </NavLink>
                 <NavLink className="mr-10">Statistics</NavLink>
-                <NavLink className="mr-10">Applied Jobs</NavLink>
+                <NavLink to={'/applied'} className="mr-10">
+                  Applied Jobs
+                </NavLink>
                 <NavLink className="mr-10">Blog</NavLink>
               </ul>
             </div>
@@ -29,9 +31,13 @@ const Header = () => {
           </div>
           <div className="navbar-center hidden lg:flex ">
             <ul className="font-gsans text-base font-medium flex text-neutral-500">
-              <NavLink className="mr-10 pt-1">Home</NavLink>
+              <NavLink to={'/'} className="mr-10 pt-1">
+                Home
+              </NavLink>
               <NavLink className="mr-10 pt-1">Statistics</NavLink>
-              <NavLink className="mr-10 pt-1">Applied Jobs</NavLink>
+              <NavLink to={'/applied'} className="mr-10 pt-1">
+                Applied Jobs
+              </NavLink>
               <NavLink className="mr-10 pt-1">Blog</NavLink>
             </ul>
           </div>

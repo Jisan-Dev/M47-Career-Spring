@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './pages/Root';
 import Homepage from './pages/homepage';
 import JobDetails from './pages/job-details';
+import Applied from './pages/applied';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,12 @@ const router = createBrowserRouter([
       {
         path: '/jobs/:id',
         element: <JobDetails />,
-        loader: () => fetch('../jobs.json'), //this approach is just for practice purpose. Usually we don't load all data instead we load only specific data
+        loader: () => fetch('/jobs.json'), //this approach is just for practice purpose. Usually we don't load all data instead we load only specific data
+      },
+      {
+        path: '/applied',
+        element: <Applied />,
+        loader: () => fetch('/jobs.json'), //this approach is just for practice purpose. Usually we don't load all data instead we load only specific data
       },
     ],
   },
